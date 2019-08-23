@@ -1,0 +1,66 @@
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge; IE=11; IE=10; IE=9; IE=8; IE=7;">  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.css">	
+	<!---<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/css/bootstrap-select.css">--->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.js"></script>		
+	<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.10/js/bootstrap-select.js"></script>	--->	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+</head>
+
+<body>
+<br><br>
+<div class="container col-sm-12" > 
+	<form class="form-horizontal" action="" method="post" name="myform" id="myform" data-toggle="validator" role="form">
+		<div class="form-group ">
+			<label for="geb_naam" class="control-label col-sm-4 label-sm">Name</label>
+			<div class="col-sm-4">
+				<input class="form-control input-sm" type="text" name="geb_naam" id="geb_naam" placeholder="Name" required data-error="Please fill in required field." >
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="geb_taal" class="control-label col-sm-4 label-sm">Language</label>
+			<div class="col-sm-4">
+				<select class="selectpicker show-tick" name="geb_taal" id="geb_taal" title="Select" required data-error="Please fill in required field." data-style="btn-default btn-sm">
+					<option value="nl">NL</option>
+					<option value="fr">FR</option>
+				</select>
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		<div class="form-group ">
+			<label for="dos_status" class="control-label col-sm-4 label-sm">Status</label>
+			<div class="col-sm-8">
+				<select class="selectpicker show-tick" name="dos_status" id="dos_status" title="Status" required data-error="Please fill in required field." 
+					data-style="btn-default btn-sm" data-width="fit"  data-selected-text-format="count > 2" data-dropup-auto="false" multiple pattern="" 
+					data-select-all-text="All" data-deselect-all-text = "None" data-none-Results-Text = "No result" data-actions-Box="true" data-live-search="true">
+					<option value="1"  data-subtext="">Ontwerpfase, nog niet aanbesteed</option>
+					<option value="2"  data-subtext="">Aanbesteed, nog niet vastgelegd</option>
+					<option value="3"  data-subtext="">Vastgelegd, nog niet betekend</option>
+					<option value="4"  data-subtext="">Betekend, nog niet in uitvoering</option>
+					<option value="5"  data-subtext="">In uitvoering</option>
+					<option value="6"  data-subtext="">In waarborg</option>
+					<option value="7"  data-subtext="">Definitief aanvaard</option>
+					<option value="8"  data-subtext="">Gaat niet door</option>
+					<option value="9"  data-subtext="">Volledig afgehandeld</option>
+				</select>
+				<div class="help-block with-errors"></div>
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<button type="submit" class="btn btn-success btn-sm pull-right"> <span class='far fa-save fa-1x '></span> Save</button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
